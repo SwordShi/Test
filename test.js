@@ -16,7 +16,8 @@
 <p>自定义服务，用于转换16进制数：</p>
 
 <script>
-/*var app = angular.module('myApp', []);
+/*无输入框，仅显示
+var app = angular.module('myApp', []);
 
 app.service('hexafy', function() {
 	this.myFunc = function (x) {
