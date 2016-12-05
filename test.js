@@ -27,6 +27,8 @@ app.controller('myCtrl', function($scope, hexafy) {
   $scope.hex = hexafy.myFunc(255);
 });*/
 
+//测试是否会冲突
+
 //自定义服务，来进行进制转换
 var model = angular.module('myApp',[]);
 model.service('hexafy', function(){
