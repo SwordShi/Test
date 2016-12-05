@@ -29,7 +29,7 @@ app.controller('myCtrl', function($scope, hexafy) {
 });*/
 
 //测试是否会冲突
-
+	//再来
 //自定义服务，来进行进制转换
 var model = angular.module('myApp',[]);
 model.service('hexafy', function(){
