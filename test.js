@@ -9,11 +9,11 @@
 
 <input type="number" ng-model="num"/>
 
-<h1>16½øÖÆ£º{{hex}}</h1>
+<h1>16è¿›åˆ¶ï¼š{{hex}}</h1>
 
 </div>
 
-<p>×Ô¶¨Òå·şÎñ£¬ÓÃÓÚ×ª»»16½øÖÆÊı£º</p>
+<p>è‡ªå®šä¹‰æœåŠ¡ï¼Œç”¨äºè½¬æ¢16è¿›åˆ¶æ•°ï¼š</p>
 
 <script>
 /*var app = angular.module('myApp', []);
@@ -27,10 +27,10 @@ app.controller('myCtrl', function($scope, hexafy) {
   $scope.hex = hexafy.myFunc(255);
 });*/
 
-//×Ô¶¨Òå·şÎñ£¬À´½øĞĞ½øÖÆ×ª»»
+//è‡ªå®šä¹‰æœåŠ¡ï¼Œæ¥è¿›è¡Œè¿›åˆ¶è½¬æ¢
 var model = angular.module('myApp',[]);
 model.service('hexafy', function(){
-	//·şÎñÏÂµÄ·½·¨
+	//æœåŠ¡ä¸‹çš„æ–¹æ³•
 	this.myfunction = function(x){
 		return x.toString(16);
 	};
@@ -38,7 +38,8 @@ model.service('hexafy', function(){
 
 model.controller('myCtrl',function($scope , hexafy){
 	$scope.num = 15;
-	$scope.$watch('num',function(data){
+	//ä½¿ç”¨$watchæ¥ç›‘å¬ï¼Œinputçš„å€¼	
+ 	$scope.$watch('num',function(data){
 	  $scope.hex = hexafy.myfunction(data);
 	});
 	
